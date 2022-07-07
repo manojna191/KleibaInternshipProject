@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<form class="m-3" action="/delete" method="post">
+  <div class="container m-3">
+      <h1><%=Toy.ToyName%></h1>
+      <p><%=Toy.description%></p>
+  </div>
+  <button type="submit" value="<%=Toy._id%>" name="toysid"class="btn btn-dark m-3"name="delete">Delete</button>
+</form>
+<form class="m-3 mt-4" action="/update" method="post">
+  <p class="m-3">wanna update the description</p>
+  <textarea class="form-control m-3" name="description" rows="5" cols="30"></textarea>
+  <button class="btn btn-dark m-3" type="submit" name="ToyName" value="<%=Toy.ToyName%>">Update</button>
+</form>

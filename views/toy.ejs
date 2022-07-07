@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<a class="btn btn-dark m-3" href="/submitToy" role="button">Add Toy</a>
+<form class="m-3" action="/search" method="post">
+  <div class="input-group">
+    <input class="rounded" type='search'name="ToyName" placeholder="Search Toy"/>
+    <button type="submit" class="btn btn-outline-primary ml-2">Search</button>
+  </div>
+</form>
+<div class="m-3">
+  <%toys.forEach(function(toy){%>
+    <h3><%=toys.ToyName%></h3>
+    <p><%=toys.description%></p>
+  <%})%>
+</div>
+
+<%- include('partials/footer') %>
